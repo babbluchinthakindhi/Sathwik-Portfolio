@@ -1,0 +1,504 @@
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+    width:90%;
+    max-width:1400px;
+
+    margin:80px auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:80px;
+
+    min-height:calc(100vh - 140px);
+    margin-top:10px;
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.hero-left{
+    flex:1;
+    margin-left:40px;
+}
+
+/* Greeting Badge */
+
+.hero-badge{
+
+    display:inline-flex;
+    align-items:center;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:rgba(79,70,229,.08);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin-bottom:16px;
+}
+
+/* Name */
+
+.hero-left h1{
+
+    font-size:60px;
+
+    font-weight:750;
+
+    line-height:1.05;
+
+    color:var(--dark);
+
+    margin-bottom:18px;
+}
+
+.hero-left h1 span{
+
+    background:var(--gradient);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+    color:transparent;
+}
+
+/* Profession */
+
+.hero-left h3{
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:#1F2937;
+
+    margin-bottom:8px;
+}
+
+/* Tech Stack */
+
+.tech-stack{
+
+    font-size:18px;
+
+    color:var(--primary);
+
+    font-weight:500;
+
+    margin-bottom:18px;
+}
+
+/* Description */
+
+.hero-desc{
+
+    max-width:620px;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:var(--text);
+
+    margin-bottom:40px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:24px;
+}
+
+.primary-btn,
+.secondary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    padding:14px 24px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+/* Primary */
+
+.primary-btn{
+
+    background:var(--gradient);
+
+    color:white;
+
+    box-shadow:0 10px 30px rgba(79,70,229,.25);
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(79,70,229,.35);
+}
+
+.primary-btn i{
+
+    transition:.3s;
+}
+
+.primary-btn:hover i{
+
+    transform:translateX(6px);
+}
+
+/* Secondary */
+
+.secondary-btn{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    background:white;
+}
+
+.secondary-btn:hover{
+
+    background:var(--gradient);
+
+    color:white;
+
+    border-color:transparent;
+
+    transform:translateY(-4px);
+}
+
+.secondary-btn i{
+
+    transition:.3s;
+}
+
+.secondary-btn:hover i{
+
+    transform:rotate(-10deg);
+}
+
+/* ===========================
+   SOCIAL ICONS
+=========================== */
+
+.social-icons{
+
+    display:flex;
+
+    gap:30px;
+
+    margin-left:40px;
+}
+
+.social-icons a{
+
+    width:56px;
+    height:56px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    border-radius:18px;
+
+    background:white;
+
+    color:#1F2937;
+
+    font-size:22px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.social-icons a:hover{
+
+    color:var(--primary);
+
+    transform:translateY(-6px);
+}
+
+/* ===========================
+   RIGHT SIDE
+=========================== */
+
+.hero-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.hero-right img{
+
+    width:100%;
+
+    max-width:560px;
+
+}
+
+/* Floating Animation */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ===========================
+TABLET (992px)
+=========================== */
+
+@media (max-width: 992px){
+
+    .hero-section{
+
+        width:90%;
+
+        gap:50px;
+
+        padding-top:30px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:58px;
+
+    }
+
+    .hero-left h3{
+
+        font-size:24px;
+
+    }
+
+    .hero-desc{
+
+        font-size:16px;
+
+        max-width:500px;
+
+    }
+
+    .hero-right img{
+
+        width:420px;
+
+    }
+
+}
+
+/* ===========================
+MOBILE (768px)
+=========================== */
+
+@media (max-width:768px){
+
+    .hero-section{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        gap:35px;
+
+        padding-top:30px;
+
+        min-height: 100vh;
+
+        height: auto;
+
+        padding-bottom: 10px;
+
+    }
+
+    .hero-left{
+
+        width:100%;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        margin-left:40px;
+        
+
+    }
+
+    .hero-right{
+
+        width:100%;
+
+        display:flex;
+
+        justify-content:center;
+
+    }
+
+    .hero-right img{
+
+        width:320px;
+
+        max-width:100%;
+
+    }
+
+    .hero-left h1{
+
+        font-size:46px;
+
+        line-height:1.1;
+
+    }
+
+    .hero-left h3{
+
+        font-size:20px;
+
+    }
+
+    .tech-stack{
+
+        font-size:15px;
+
+    }
+
+    .hero-desc{
+
+        font-size:15px;
+
+        max-width:100%;
+
+        line-height:1.7;
+
+    }
+
+    .hero-buttons{
+
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:15px;
+
+    }
+
+    .primary-btn,
+    .secondary-btn{
+
+        padding:14px 22px;
+
+        font-size:14px;
+
+    }
+
+    .social-icons{
+
+        justify-content:center;
+
+        margin-top:20px;
+        margin-left:0px;
+
+    }
+
+}
+
+/* ===========================
+SMALL MOBILE (480px)
+=========================== */
+
+@media (max-width:480px){
+
+    .hero-right img{
+
+        width:260px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:36px;
+
+    }
+
+    .hero-left h3{
+
+        font-size:17px;
+
+    }
+
+    .hero-badge{
+
+        font-size:13px;
+
+        padding:8px 16px;
+
+    }
+
+    .hero-desc{
+
+        font-size:14px;
+
+    }
+
+    .primary-btn,
+    .secondary-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}

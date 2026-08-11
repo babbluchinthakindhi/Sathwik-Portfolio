@@ -1,0 +1,376 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+    position: fixed;
+
+    top: 20px;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+
+    pointer-events: none;
+}
+
+
+/* ===========================
+   NAVIGATION BOX
+=========================== */
+
+.nav-links-box {
+    pointer-events: auto;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(79, 70, 229, 0.08);
+
+    border-radius: 50px;
+
+    padding: 14px 32px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ===========================
+   NAVIGATION LINKS
+=========================== */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 34px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #1d1d1d;
+
+    font-size: 15px;
+
+    font-weight: 550;
+
+    padding: 4px 0;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+/* ===========================
+   UNDERLINE
+=========================== */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background: var(--gradient);
+
+    border-radius: 10px;
+
+    transition:
+        width 0.35s ease;
+}
+
+
+/* Hover */
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Active */
+
+.nav-links a.active {
+    background: var(--gradient);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* ===========================
+   RESUME BUTTON
+=========================== */
+
+.resume-box {
+    position: absolute;
+
+    right: 35px;
+    top: 0;
+
+    pointer-events: auto;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Resume button */
+
+.resume-btn {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(91, 92, 255, 0.25);
+
+    background: #ffffff;
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.06);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Resume hover */
+
+.resume-btn:hover {
+    background: var(--gradient);
+
+    color: #ffffff;
+
+    border-color: transparent;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(91, 92, 255, 0.20);
+}
+
+
+/* Remove browser focus outline */
+
+.resume-btn:focus,
+.resume-btn:active,
+.resume-btn:focus-visible {
+    outline: none;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ===========================
+   HIDDEN RESUME
+=========================== */
+
+.resume-box.hidden {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(-8px);
+}
+
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 1000px) {
+
+    .nav-links-box {
+        padding: 13px 25px;
+    }
+
+    .nav-links {
+        gap: 25px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .resume-box {
+        right: 20px;
+    }
+
+    .resume-btn {
+        padding: 10px 16px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* ===========================
+MOBILE NAVBAR
+=========================== */
+
+.menu-toggle{
+    display:none;
+}
+
+@media (max-width:800px){
+
+    .navbar{
+
+        top:15px;
+
+        justify-content:space-between;
+
+        padding:0 20px;
+
+        pointer-events:auto;
+    }
+
+    .resume-box{
+    display:block;
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    top:auto;
+
+    z-index:1200;
+}
+
+.resume-btn{
+    padding:12px 18px;
+    font-size:14px;
+}
+
+    .menu-toggle{
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+
+        width:50px;
+        height:50px;
+
+        background:#fff;
+
+        border-radius:12px;
+
+        box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+        color:var(--primary);
+
+        font-size:22px;
+
+        cursor:pointer;
+
+        z-index:1101;
+    }
+
+    .nav-links-box{
+
+        position:fixed;
+
+        top:0;
+        right:-100%;
+
+        width:260px;
+        height:100vh;
+
+        background:#fff;
+
+        border-radius:0;
+
+        padding:90px 35px;
+
+        transition:.4s;
+
+        box-shadow:-10px 0 30px rgba(0,0,0,.08);
+
+        z-index:1100;
+    }
+
+    .nav-links-box.active{
+
+        right:0;
+
+    }
+
+    .nav-links{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:28px;
+    }
+
+    .nav-links a{
+
+        font-size:18px;
+    }
+
+}

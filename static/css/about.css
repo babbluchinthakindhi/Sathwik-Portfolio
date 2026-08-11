@@ -1,0 +1,436 @@
+/* ===========================
+   ABOUT SECTION
+=========================== */
+
+.about{
+
+    padding:80px 8%;
+
+    text-align:center;
+
+    margin-top:120px;
+
+}
+
+/* Heading */
+
+.section-title p{
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+    color:#5B5CFF;
+
+    margin-bottom:-10px;
+
+    margin-top:-60px;
+
+}
+
+.section-title h2{
+
+    font-size:60px;
+
+    font-weight:600;
+
+    color:#0f172a;
+    margin-bottom:-20px;
+}
+
+.section-title span{
+
+    background:linear-gradient(90deg,#5B5CFF,#C13BFF);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+/* Small decorative line */
+
+.projects-line {
+    display: flex;
+    justify-content: center;
+
+    margin: 10px 0;
+
+}
+
+.projects-line span {
+    width: 120px;
+    height: 2px;
+
+    position: relative;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #5b5cff,
+        #c13bff,
+        transparent
+    );
+}
+
+.projects-line span::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #6d3df5;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+/* Paragraph */
+
+.about-content{
+
+    width:760px;
+
+    max-width:100%;
+
+    margin:auto;
+
+}
+
+.about-content p{
+
+    font-size:18px;
+
+    color:#555;
+
+    line-height:1.2;
+
+    margin-bottom:16px;
+
+}
+
+/* Download Button */
+
+.cv-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:10px;
+
+    padding:10px 20px;
+
+    border-radius: 10px;
+
+    border:1px solid #5B5CFF;
+
+    text-decoration:none;
+
+    color:#222;
+
+    font-weight:600;
+
+    font-size:18px;
+
+    transition:.35s;
+
+}
+
+.cv-btn:hover{
+
+    background:white;
+
+    color:#5B5CFF;
+    
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(79,70,229,.35);
+
+}
+
+/* Cards */
+
+.about-cards{
+
+    margin-top:25px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    max-width:1100px;
+
+    margin:25px auto 0;
+}
+
+/* Individual Card */
+
+.about-card{
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    border-radius:30px;
+
+    padding:28px 28px;
+
+    transition:.4s;
+
+    box-shadow:0 15px 40px rgba(91,92,255,.10);
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 60px rgba(91,92,255,.18);
+
+}
+
+/* Icon */
+
+.about-card .icon{
+
+    width:40px;
+
+    height:40px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:rgba(91,92,255,.08);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.about-card i{
+
+    font-size:28px;
+
+    background:linear-gradient(90deg,#5B5CFF,#C13BFF);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.about-card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+    color:#0f172a;
+
+}
+
+.about-card p{
+
+    font-size:18px;
+
+    line-height:1.2;
+
+    color:#555;
+
+}
+
+/* =====================================
+TABLET (992px and below)
+===================================== */
+
+@media (max-width:992px){
+
+    .about{
+
+        padding:70px 6%;
+        margin-top:80px;
+    }
+
+    .section-title p{
+
+        margin-top:0;
+        font-size:15px;
+        letter-spacing:2px;
+    }
+
+    .section-title h2{
+
+        font-size:46px;
+        margin-bottom:0;
+    }
+
+    .projects-line{
+
+        margin:14px 0 24px;
+    }
+
+    .about-content{
+
+        width:100%;
+        max-width:700px;
+    }
+
+    .about-content p{
+
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .cv-btn{
+
+        font-size:16px;
+        padding:12px 22px;
+    }
+
+    .about-cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+        margin:45px auto 0;
+
+        gap:22px;
+    }
+
+    .about-card{
+
+        padding:24px 20px;
+
+        border-radius:22px;
+    }
+
+    .about-card h3{
+
+        font-size:22px;
+    }
+
+    .about-card p{
+
+        font-size:15px;
+    }
+
+}
+/* =====================================
+MOBILE (768px and below)
+===================================== */
+
+@media (max-width:768px){
+
+    .about{
+
+        padding:60px 20px;
+        margin-top:60px;
+    }
+
+    .section-title p{
+
+        font-size:13px;
+        letter-spacing:2px;
+        margin-bottom:8px;
+    }
+
+    .section-title h2{
+
+        font-size:34px;
+    }
+
+    .projects-line{
+
+        margin:12px 0 20px;
+    }
+
+    .projects-line span{
+
+        width:90px;
+    }
+
+    .about-content{
+
+        width:100%;
+    }
+
+    .about-content p{
+
+        font-size:15px;
+        line-height:1.8;
+        text-align:center;
+    }
+
+    .cv-btn{
+
+        font-size:15px;
+
+        padding:10px 20px;
+
+        margin-top:15px;
+    }
+
+    .about-cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+
+        margin:35px auto 0;
+    }
+
+    .about-card{
+
+        padding:18px 15px;
+
+        border-radius:18px;
+    }
+
+    .about-card .icon{
+
+        width:38px;
+        height:38px;
+
+        margin-bottom:10px;
+    }
+
+    .about-card i{
+
+        font-size:20px;
+    }
+
+    .about-card h3{
+
+        font-size:20px;
+
+        margin-bottom:8px;
+    }
+
+    .about-card p{
+
+        font-size:13px;
+
+        line-height:1.5;
+    }
+
+}

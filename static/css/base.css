@@ -1,0 +1,40 @@
+:root{
+
+    --primary:#4F46E5;
+    --secondary:#8B5CF6;
+
+    --gradient:linear-gradient(
+        90deg,
+        #4F46E5 0%,
+        #dc36eb 100%
+    );
+
+    --dark:#0F172A;
+    --text:#64748B;
+    --white:#FFFFFF;
+
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f9ff;
+    color:#111827;
+    padding-top: 120px;
+    width:100%;
+    overflow-x:hidden;
+}
+section{
+    scroll-margin-top:120px;
+}
+*{
+    box-sizing:border-box;
+}
